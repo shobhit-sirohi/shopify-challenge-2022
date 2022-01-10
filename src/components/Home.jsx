@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-
+import ENV from "../../env";
 const Home = () => {
   const [photoData, setPhotoData] = useState(null);
 
@@ -8,7 +8,7 @@ const Home = () => {
 
     async function fetchPhoto() {
       const res = await fetch(
-        `https://api.nasa.gov/planetary/apod?api_key=3wygIiXKejuahRqAgG6WRHMfA999DW3XmSIiYTgK`
+        `https://api.nasa.gov/planetary/apod?api_key=${ENV.apodKey}`
       );
       const data = await res.json();
       setPhotoData(data);
