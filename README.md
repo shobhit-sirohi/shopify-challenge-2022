@@ -1,7 +1,7 @@
 <br />
 <div align="center">
   <a href="https://spacetagram-shobhit-sirohi.netlify.app/">
-    <img src="src/images/rocket.png" alt="Logo" width="80" height="80">
+    <img src="src/images/giphy.gif" alt="Logo" width="80" height="80">
   </a>
   <h3 align="center">SPACETAGRAM</h3>
 
