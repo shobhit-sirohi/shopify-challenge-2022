@@ -1,7 +1,7 @@
 <br />
 <div align="center">
   <a href="https://spacetagram-shobhit-sirohi.netlify.app/">
-    <img src="src/images/favicon.ico" alt="Logo" width="80" height="80">
+    <img src="src/images/rocket.png" alt="Logo" width="80" height="80">
   </a>
   <h3 align="center">SPACETAGRAM</h3>
 
@@ -16,7 +16,7 @@
 
 ## Overview
 
-<img width="1663" alt="overview" src="https://user-images.githubusercontent.com/21247694/143664941-abbc7899-c7ec-405c-9d4a-53f2ad254bba.png"/>
+<img width="1680" alt="Screenshot 2022-01-19 at 7 44 10 AM" src="https://user-images.githubusercontent.com/21247694/150050811-068d9942-3f7f-4ee4-a35b-7ff8dd80e55a.png">
 
 ### Built With
 
