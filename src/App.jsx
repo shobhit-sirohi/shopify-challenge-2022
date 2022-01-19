@@ -1,13 +1,25 @@
 import React from "react";
-import Home from "./components/Home";
+import Home from "./pages/Home";
+import Today from "./pages/Today";
+
+import {
+  BrowserRouter,
+  Route,
+  Routes,
+} from "react-router-dom";
+import ScrollToTop from "./components/ScrollToTop";
 import NavBar from "./components/NavBar";
 
 const App = () => {
   return (
-    <div className="px-4">
+    <BrowserRouter>
       <NavBar />
-      <Home />
-    </div>
+      <ScrollToTop />
+      <Routes>
+        <Route path="/" exact element={<Home />} />
+        <Route path="/Today" exact element={<Today />} />
+      </Routes>
+    </BrowserRouter>
   );
 };
 
