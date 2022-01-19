@@ -18,7 +18,7 @@ const Home = () => {
     }
   }, []);
 
-  //Loading screen
+  // Loading screen
   if (photoData.length === 0)
     return (
       <div className="flex flex-col items-center justify-center ">
