@@ -1,40 +1,49 @@
 import React, { useState, useEffect } from "react";
+import Card from "../components/Card";
+import loading from "../images/giphy.gif";
 import ENV from "../../env";
+
 const Home = () => {
-  const [photoData, setPhotoData] = useState(null);
+  const [photoData, setPhotoData] = useState([]);
 
   useEffect(() => {
     fetchPhoto();
 
     async function fetchPhoto() {
       const res = await fetch(
-        `https://api.nasa.gov/planetary/apod?api_key=${ENV.apodKey}`
+        `https://api.nasa.gov/planetary/apod?count=5&api_key=${ENV.apodKey}`
       );
       const data = await res.json();
       setPhotoData(data);
     }
   }, []);
 
-  if (!photoData)
+  //Loading screen
+  if (photoData.length === 0)
     return (
-      <div>
-        <h1>No data fetched</h1>
+      <div className="flex flex-col items-center justify-center ">
+        <img src={loading} alt="loading gif" />
+        <h2 className="text-2xl">
+          Loading Data from Space...
+        </h2>
       </div>
     );
+
   return (
-    <div>
-      <div className="nasa-photo">
-        <img
-          src={photoData.url}
-          alt={photoData.title}
-          className="photo"
-        />
-        <div>
-          <h1>{photoData.title}</h1>
-          <p className="">{photoData.date}</p>
-          <p className="">{photoData.explanation}</p>
-        </div>
-      </div>
+    <div className="pb-10 space-y-10 xl:space-y-20">
+      {photoData
+        .map((item) => (
+          <Card
+            date={item.date}
+            exp={item.explanation}
+            url={item.url}
+            title={item.title}
+            copy={item.copyright}
+            hdurl={item.hdurl}
+            media={item.media_type}
+          />
+        ))
+        .reverse()}
     </div>
   );
 };

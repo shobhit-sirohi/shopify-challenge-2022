@@ -1,12 +1,13 @@
 import React from "react";
 import Home from "./components/Home";
-import Apod from "./components/Apod";
+
 import {
   BrowserRouter,
   Route,
   Routes,
 } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
+import NavBar from "./components/NavBar";
 
 const App = () => {
   return (
@@ -17,7 +18,8 @@ const App = () => {
     //     <Route path="/apod" exact element={<Apod />} />
     //   </Routes>
     // </BrowserRouter>
-    <div>
+    <div className="px-4">
+      <NavBar />
       <Home />
     </div>
   );
