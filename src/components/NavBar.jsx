@@ -10,7 +10,7 @@ const NavBar = () => {
       </Link>
       <Link to="/Today">
         <span className="text-xs font-medium md:text-base lg:text-xl 2xl:text-2xl hover:text-newblue">
-          Today's APOD
+          Today's POD
         </span>
       </Link>
     </div>
